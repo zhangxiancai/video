@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>一生一世电影网</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+
+
+</head>
+<body class="about">
+<style type="text/css">
+
+    .about{
+        background-color: gainsboro;
+        padding: 30px 0px;
+        margin: 10px 0px;
+    }
+    .template{
+        background-color: white;
+        padding: 10px;
+        margin: 5px;
+    }
+    .video{
+
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div th:each="video : ${videos}" class="template">
+            <video  th:src="${'/userVideos/' +video.location }" controls="controls">不支持video标签</video>
+            <p th:text="${video.name}"> </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>

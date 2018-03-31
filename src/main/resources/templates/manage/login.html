@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>一生一世电影网</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/addarticle.css"/>
+
+</head>
+<body class="about">
+<style type="text/css">
+
+    .about{
+        background-color: gainsboro;
+        padding: 30px 0px;
+        margin: 10px 0px;
+    }
+    .template{
+        background-color: white;
+        padding: 10px;
+        margin: 5px;
+    }
+    .video{
+
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="template">
+
+
+            <form class="form" action="/manage/login" method="post" enctype="multipart/form-data">
+
+                <p>密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" class="responsive" name="password" id="content" th:text="${password}"> </input></p>
+
+                <p><input  type="submit" value="验证"/></p>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>
