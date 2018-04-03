@@ -14,7 +14,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         GlobalMy.LOCATION=System.getenv(GlobalConstant.VIDEOS_LOCATION);
         if( GlobalMy.LOCATION==null){
-            GlobalMy.LOCATION="D:\\videos\\";
+            GlobalMy.LOCATION="/videos/";
         }
         registry.addResourceHandler("/userVideos/**").addResourceLocations("file:"+GlobalMy.LOCATION);
         super.addResourceHandlers(registry);

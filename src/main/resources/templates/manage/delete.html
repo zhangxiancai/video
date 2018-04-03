@@ -21,35 +21,17 @@
         background-color: #e9e9e9;
         padding: 10px;
         margin: 5px;
-        text-align:center;
+
     }
 
-    .logo{
-        width: 20%;
-    }
-    @media (max-width: 768px){
-        .video{
-            width: 100%;
-        }
-    }
-    @media (min-width: 768px) {
-        .video{
-            width: 75%;
-        }
-    }
 </style>
 
 <div class="container">
     <div class="row">
-        <div  class="template">
-            <div class="logo"><img src="image/OpenPron.png" alt="" class="img-responsive"></div>
-            <h2>Open-Porn</h2>
-
-        </div>
         <div th:each="video : ${videos}" class="template">
-            <h3 th:text="${video.name}"> </h3>
-            <video  class="video" th:src="${'/userVideos/' +video.location }" controls="controls">不支持video标签</video>
-
+            <a th:href="'/manage/doDelete?id='+${video.id}">删除</a>
+            <h3 th:text="'ID:'+${video.id}"></h3>
+            <h3 th:text="'NAME:'+${video.name}"></h3>
         </div>
 
     </div>

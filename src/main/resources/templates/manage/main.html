@@ -24,34 +24,19 @@
         text-align:center;
     }
 
-    .logo{
-        width: 20%;
-    }
-    @media (max-width: 768px){
-        .video{
-            width: 100%;
-        }
-    }
-    @media (min-width: 768px) {
-        .video{
-            width: 75%;
-        }
-    }
 </style>
 
 <div class="container">
     <div class="row">
+    <div  class="template">
+            <p>管理界面</p>
+    </div>
         <div  class="template">
-            <div class="logo"><img src="image/OpenPron.png" alt="" class="img-responsive"></div>
-            <h2>Open-Porn</h2>
-
+            <a href="/manage/pushVideo">上传</a>
         </div>
-        <div th:each="video : ${videos}" class="template">
-            <h3 th:text="${video.name}"> </h3>
-            <video  class="video" th:src="${'/userVideos/' +video.location }" controls="controls">不支持video标签</video>
-
+        <div  class="template">
+            <a href="/manage/deleteVideo">删除</a>
         </div>
-
     </div>
 
 </div>

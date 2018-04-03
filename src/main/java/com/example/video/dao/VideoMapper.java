@@ -20,4 +20,6 @@ public interface VideoMapper {
     @Insert("INSERT INTO video(name,location) VALUES(#{name},#{location})")
     Boolean insert(@Param("name") String name, @Param("location") String location);
 
+    @Select("DELETE FROM video WHERE id=#{id}")
+    Boolean deleteById(@Param("id") int id);
 }
